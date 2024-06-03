@@ -1,1 +1,3 @@
-# vision_transformer
+# Vision Transformer from Scratch 👶
+
+

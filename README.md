@@ -69,9 +69,9 @@ Train : 1034, Validation : 133, Test : 128개로 구성되어 있으며, Label�
 ```
 **2. dataset 확인** (각 클래스의 예제)
 **3. ViT 이미지 프로세서* Load** <br>
-  *이미지 프로세서 : 모델이 이미지를 처리할 수 있도록 전처리하는 역할 수행(이미지 크기 조정, 패치 생성, 정규화, 텐서 변환 등등)
-**4. Input data로 변환** - tensor로 변환
-**5. Pretrain model Load**
+  *이미지 프로세서 : 모델이 이미지를 처리할 수 있도록 전처리하는 역할 수행(이미지 크기 조정, 패치 생성, 정규화, 텐서 변환 등등) <br>
+**4. Input data로 변환** - tensor로 변환 <br>
+**5. Pretrain model Load** <br>
 ```
 from transformers import ViTForImageClassification
 

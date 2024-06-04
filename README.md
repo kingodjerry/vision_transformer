@@ -48,12 +48,24 @@ Transformer Encoder의 마지막 출력에서 **클래스 토큰**을 추출하�
 
 
 # ViT Fine-Tuning 🌾
-앞서 이해한 Vision Transformer 모델을 Fine-tuning하여 **건강한 콩잎**과 **해로운 콩잎**으로 이미지를 분류하는 프로젝트를 진행하였다. <br> 
+앞서 이해한 Vision Transformer 모델을 Fine-tuning하여 **건강한 콩잎**과 **해로운 콩잎**으로 이미지를 분류하는 프로젝트를 진행하였다. 
+
+### Pre-train model
+Pre-train model : vit-base-patch-224-in21k model (구글 제공)
+
+### Dataset
+Dataset은 datasets transformers 라이브러리에서 'beans' 데이터를 사용하였다. <br>
+해당 데이터셋은 콩잎 이미지 데이터로, 병에 걸린 콩잎과 건강한 콩잎으로 구분되어 있는 데이터 세트이다. <br>
+Train : 1034, Validation : 133, Test : 128개로 구성되어 있으며, Label은 'angular_leaf_spot', 'bean_rust', 'healthy'로 구분되어 있다. <br> 
 
 **1. transformer와 dataset 다운로드**
 ```
    pip install datasets transformers
    pip install transformers[torch]
+
+   from datasets import load_dataset
+
+   dataset = load_dataset('beans')
 ```
 **2. dataset 확인** (각 클래스의 예제)
 **3. ViT 이미지 프로세서* Load** <br>

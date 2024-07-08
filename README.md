@@ -39,7 +39,7 @@ Vision Transformer는 이미지 분류를 위해 Transformer 아키텍처를 적
 **1. 멀티헤드 셀프 어텐션(Multi-Head Self-Attention)** <br>
 &ensp;각 패치와 클래스 토큰의 관계를 학습한다. <br>
 **2. 피드포워드 네트워크(Feedforward Network)** <br> 
-&ensp;어텐션 결과를 더 깊이 학습하기 위해 각 토큰 임베딩에 대해 독립적으로 적용되는 두 개의 완전 연결층을 포함한다. 일반적으로 활성화 함수로 GELU가 사용된다.  <br>
+&ensp;어텐션 결과를 더 깊이 학습하기 위해 각 토큰 임베딩에 대해 독립적으로 적용되는 두 개의 완전 연결층을 포함한다. 일반적으로 활성화 함수 GELU가 사용된다.  <br>
 **3. 레이어 정규화 및 잔차 연결(Layer Normalization and Residual Connections)** <br> 
 &ensp;각 멀티헤드 셀프 어텐션과 피드포워드 네트워크 모듈의 출력에는 레이어 정규화와 잔차 연결이 적용된다. 이 과정은 학습을 안정화하고, 정보 흐름을 원활하게 유지할 수 있도록 한다. <br>
 
